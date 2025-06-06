@@ -1,0 +1,521 @@
+[
+  {
+    "endpoint": "/polpred/spatials",
+    "method": "POST",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/spatials",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/spatials/{reference}",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/spatials/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/spatials",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "input_query_strings": ["*"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/spatials",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/spatials/{reference}/data",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "input_query_strings": ["*"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/spatials/{reference}/data",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/bookmarks",
+    "method": "POST",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/bookmarks",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/bookmarks",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "input_query_strings": ["*"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/bookmarks",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/bookmarks/{reference}",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/bookmarks/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/bookmarks/{reference}",
+    "method": "DELETE",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/bookmarks/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/bookmarks",
+    "method": "DELETE",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/bookmarks",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/templates",
+    "method": "POST",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/templates",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/templates",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "input_query_strings": ["*"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/templates",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/templates/{reference}",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/templates/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/templates/{reference}",
+    "method": "DELETE",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/templates/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/templates",
+    "method": "DELETE",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/templates",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/series",
+    "method": "POST",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/series",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/series/{reference}/data",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "input_query_strings": ["*"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/series/{reference}/data",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/series/{reference}",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/series/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/series",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "input_query_strings": ["*"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/series",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/series/{reference}",
+    "method": "DELETE",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/series/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/spatials/{reference}",
+    "method": "DELETE",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/polpred/spatials/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/polpred/health",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/polpred/health",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30313"],
+        "disable_host_sanitize": true
+      }
+    ]
+  }
+]

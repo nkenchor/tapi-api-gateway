@@ -1,0 +1,408 @@
+[
+    {
+      "endpoint": "/organisations",
+      "method": "POST",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/{reference}",
+      "method": "GET",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/{reference}",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/{reference}",
+      "method": "PUT",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/{reference}",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/signup",
+      "method": "POST",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/signup",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/invite",
+      "method": "POST",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/invite",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations",
+      "method": "GET",
+      "input_headers": ["Authorization"],
+      "input_query_strings": ["*"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user","admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/invite",
+      "method": "GET",
+      "input_headers": ["Authorization"],
+      "input_query_strings": ["*"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/invite",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/invite/{reference}",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/organisations/invite/{reference}",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/invite/{invite_reference}/resend",
+      "method": "PATCH",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/invite/{invite_reference}/resend",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+  },
+  {
+      "endpoint": "/organisations/invite/{invite_reference}/accept",
+      "method": "PATCH",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user","admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/invite/{invite_reference}/accept",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/{reference}/user/{user_reference}/leave",
+      "method": "POST",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/{reference}/user/{user_reference}/leave",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    }, 
+    {
+      "endpoint": "/organisations/users/add",
+      "method": "POST",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["admin", "super_admin", "organisation_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/users/add",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/{reference}",
+      "method": "DELETE",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["admin", "super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/{reference}",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/organisations/invite/{reference}",
+      "method": "DELETE",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["admin", "organisation_admin","super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/organisations/invite/{reference}/delete",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30306"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+        "endpoint": "/organisations/health",
+        "method": "GET",
+        "backend": [
+          {
+            "url_pattern": "/organisations/health",
+            "encoding": "no-op",
+            "sd": "static",
+            "host": ["http://localhost:30306"],
+            "disable_host_sanitize": true
+          }
+        ]
+    },
+    {
+        "endpoint": "/organisations/docs",
+        "method": "GET",
+        "backend": [
+          {
+            "url_pattern": "/organisations/docs",
+            "encoding": "no-op",
+            "sd": "static",
+            "host": ["http://localhost:30306"],
+            "disable_host_sanitize": true
+          }
+        ]
+      },
+      {
+        "endpoint": "/organisations/docs/swagger",
+        "method": "GET",
+        "backend": [
+          {
+            "url_pattern": "/organisations/docs/swagger",
+            "encoding": "no-op",
+            "sd": "static",
+            "host": ["http://localhost:30306"],
+            "disable_host_sanitize": true
+          }
+        ]
+      },
+      {
+        "endpoint": "/organisations/docs/openapi.json",
+        "method": "GET",
+        "backend": [
+          {
+            "url_pattern": "/organisations/docs/openapi.json",
+            "encoding": "no-op",
+            "sd": "static",
+            "host": ["http://localhost:30306"],
+            "disable_host_sanitize": true
+          }
+        ]
+      },
+      {
+        "endpoint": "/organisations/docs/swagger-config",
+        "method": "GET",
+        "backend": [
+          {
+            "url_pattern": "/organisations/docs/swagger-config",
+            "encoding": "no-op",
+            "sd": "static",
+            "host": ["http://localhost:30306"],
+            "disable_host_sanitize": true
+          }
+        ]
+      }
+  ]
+  

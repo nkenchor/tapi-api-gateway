@@ -1,0 +1,92 @@
+[
+  {
+    "endpoint": "/dashboards/health",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/dashboards/health",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30305"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/dashboards/docs",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/dashboards/docs",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30305"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/dashboards/docs/swagger",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/dashboards/docs/swagger",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30305"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/dashboards/docs/openapi.json",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/dashboards/docs/openapi.json",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30305"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/dashboards/docs/swagger-config",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/dashboards/docs/swagger-config",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30305"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/dashboards",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "super_admin", "organisation_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/dashboards",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30305"],
+        "disable_host_sanitize": true
+      }
+    ]
+  }
+]

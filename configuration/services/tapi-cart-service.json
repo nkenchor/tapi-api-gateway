@@ -1,0 +1,242 @@
+[
+    {
+      "endpoint": "/carts",
+      "method": "GET",
+      "input_headers": ["Authorization"],
+      "input_query_strings": ["*"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin","super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/carts",
+          "encoding": "no-op",
+          "host": ["http://localhost:30308"],
+          "sd": "static",
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/carts",
+      "method": "POST",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin","super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/carts",
+          "encoding": "no-op",
+          "host": ["http://localhost:30308"],
+          "sd": "static",
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/carts/{reference}",
+      "method": "GET",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin","super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/carts/{reference}",
+          "encoding": "no-op",
+          "host": ["http://localhost:30308"],
+          "sd": "static",
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/carts/{reference}",
+      "method": "DELETE",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin","super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/carts/{reference}",
+          "encoding": "no-op",
+          "host": ["http://localhost:30308"],
+          "sd": "static",
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/carts/{reference}/features/{feature_reference}",
+      "method": "DELETE",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin","super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/carts/{reference}/features/{feature_reference}",
+          "encoding": "no-op",
+          "host": ["http://localhost:30308"],
+          "sd": "static",
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/carts/empty",
+      "method": "DELETE",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin","super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/carts/empty",
+          "encoding": "no-op",
+          "host": ["http://localhost:30308"],
+          "sd": "static",
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/carts/checkout",
+      "method": "PATCH",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin","super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/carts/checkout",
+          "encoding": "no-op",
+          "host": ["http://localhost:30308"],
+          "sd": "static",
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/carts/discount",
+      "method": "POST",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin","super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/carts/discount",
+          "encoding": "no-op",
+          "host": ["http://localhost:30308"],
+          "sd": "static",
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+        "endpoint": "/carts/discount",
+        "method": "DELETE",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+          "auth/validator": {
+            "alg": "ES256",
+            "jwk_url": "http://localhost:30302/accounts/jwks",
+            "roles_key": "role",
+            "roles": ["user", "admin", "organisation_admin","super_admin"],
+            "operation_debug": true,
+            "disable_jwk_security": true,
+            "cache": false
+          }
+        },
+        "backend": [
+          {
+            "url_pattern": "/carts/discount",
+            "encoding": "no-op",
+            "host": ["http://localhost:30308"],
+            "sd": "static",
+            "disable_host_sanitize": true
+          }
+        ]
+    },
+    {
+        "endpoint": "/carts/health",
+        "method": "GET",
+        "backend": [
+          {
+            "url_pattern": "/carts/health",
+            "encoding": "no-op",
+            "host": ["http://localhost:30308"],
+            "sd": "static",
+            "disable_host_sanitize": true
+          }
+        ]
+    }
+  ]
+  

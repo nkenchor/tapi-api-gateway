@@ -1,0 +1,206 @@
+[
+  {
+    "endpoint": "/payments/{reference}/initiate",
+    "method": "PATCH",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/payments/{reference}/initiate",
+        "encoding": "no-op",
+        "host": ["http://localhost:30310"],
+        "sd": "static",
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/payments/{reference}",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/payments/{reference}",
+        "encoding": "no-op",
+        "host": ["http://localhost:30310"],
+        "sd": "static",
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/payments/{reference}/confirm",
+    "method": "PATCH",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/payments/{reference}/confirm",
+        "encoding": "no-op",
+        "host": ["http://localhost:30310"],
+        "sd": "static",
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/payments/{reference}/status",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/payments/{reference}/status",
+        "encoding": "no-op",
+        "host": ["http://localhost:30310"],
+        "sd": "static",
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/payments/{reference}/cancel",
+    "method": "DELETE",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/payments/{reference}/cancel",
+        "encoding": "no-op",
+        "host": ["http://localhost:30310"],
+        "sd": "static",
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/payments/{reference}/intent",
+    "method": "PATCH",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/payments/{reference}/intent",
+        "encoding": "no-op",
+        "host": ["http://localhost:30310"],
+        "sd": "static",
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/payments/history",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "input_query_strings": ["*"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "organisation_admin", "super_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/payments/history",
+        "encoding": "no-op",
+        "host": ["http://localhost:30310"],
+        "sd": "static",
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/payments/health",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/payments/health",
+        "encoding": "no-op",
+        "host": ["http://localhost:30310"],
+        "sd": "static",
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/webhooks/stripe",
+    "method": "POST",
+    "input_headers": ["stripe-signature", "content-type"],
+    "headers_to_pass": ["stripe-signature", "content-type"],
+    "backend": [
+      {
+        "url_pattern": "/api/webhooks/stripe",
+        "encoding": "no-op",
+        "host": ["http://localhost:30310"],
+        "sd": "static",
+        "disable_host_sanitize": true
+      }
+    ]
+  }
+]

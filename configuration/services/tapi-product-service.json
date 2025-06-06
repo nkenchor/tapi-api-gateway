@@ -1,0 +1,958 @@
+[
+    {
+        "endpoint": "/products/features",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "input_query_strings": ["*"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["user", "admin", "organisation_admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/features",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/features",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/features",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}",
+        "method": "PUT",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "input_query_strings": ["*"],
+        "backend": [
+            {
+                "url_pattern": "/products",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}",
+        "method": "DELETE",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}/feature",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}/feature",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}/features",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "input_query_strings": ["*"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}/features",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}/features/{feature_reference}",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}/features/{feature_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}/features",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}/features",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}/features/{feature_reference}",
+        "method": "DELETE",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}/features/{feature_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/features/{feature_reference}",
+        "method": "PUT",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/features/{feature_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/features/{feature_reference}",
+        "method": "DELETE",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/features/{feature_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}/bundles",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}/bundles",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}/bundles/{bundle_reference}",
+        "method": "PUT",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}/bundles/{bundle_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    }
+    ,
+    {
+        "endpoint": "/products/bundles/{bundle_reference}/features",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/bundles/{bundle_reference}/features",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/bundles/{bundle_reference}/features",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin", "organisation_admin","user"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/bundles/{bundle_reference}/features",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/bundles",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "input_query_strings": ["*"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["user", "admin", "organisation_admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/bundles",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}/bundles",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["user", "admin", "organisation_admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}/bundles",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/{reference}/bundles/{bundle_reference}",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["user", "admin", "organisation_admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/{reference}/bundles/{bundle_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/bundles/{bundle_reference}/discounts",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/bundles/{bundle_reference}/discounts",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/bundles/{bundle_reference}/features/{feature_reference}",
+        "method": "DELETE",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/bundles/{bundle_reference}/features/{feature_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/bundles/{bundle_reference}/discounts",
+        "method": "DELETE",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/bundles/{bundle_reference}/discounts",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/bundles/{bundle_reference}",
+        "method": "DELETE",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/bundles/{bundle_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/discounts",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/discounts",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/discounts/{discount_reference}",
+        "method": "DELETE",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/discounts/{discount_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/discounts/{discount_reference}",
+        "method": "PUT",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/discounts/{discount_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/discounts/{discount_reference}",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/discounts/{discount_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/discounts",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "input_query_strings": ["*"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/discounts",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/licenses",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/licenses",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/licenses/{license_reference}",
+        "method": "DELETE",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/licenses/{license_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/licenses/{license_reference}",
+        "method": "PUT",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/licenses/{license_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/licenses/{license_reference}",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/licenses/{license_reference}",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/licenses",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "input_query_strings": ["*"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["admin", "super_admin", "organisation_admin", "user"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/licenses",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/bundles/{bundle_reference}/cart",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["user", "admin", "super_admin", "organisation_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/bundles/{bundle_reference}/cart",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/bundles/{bundle_reference}/cart/custom",
+        "method": "POST",
+        "input_headers": ["Authorization"],
+        "extra_config": {
+            "auth/validator": {
+                "alg": "ES256",
+                "jwk_url": "http://localhost:30302/accounts/jwks",
+                "roles_key": "role",
+                "roles": ["user", "admin", "super_admin","organisation_admin"],
+                "operation_debug": true,
+                "disable_jwk_security": true,
+                "cache": false
+            }
+        },
+        "backend": [
+            {
+                "url_pattern": "/products/bundles/{bundle_reference}/cart/custom",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    },
+    {
+        "endpoint": "/products/features/models/references",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "input_query_strings": ["*"],
+        "extra_config": {
+          "auth/validator": {
+            "alg": "ES256",
+            "jwk_url": "http://localhost:30302/accounts/jwks",
+            "roles_key": "role",
+            "roles": ["user", "admin", "organisation_admin", "super_admin"],
+            "operation_debug": true,
+            "disable_jwk_security": true,
+            "cache": false
+          }
+        },
+        "backend": [
+          {
+            "url_pattern": "/products/features/models/references",
+            "encoding": "no-op",
+            "host": ["http://localhost:30307"],
+            "sd": "static",
+            "disable_host_sanitize": true
+          }
+        ]
+      },
+      {
+        "endpoint": "/products/features/models",
+        "method": "GET",
+        "input_headers": ["Authorization"],
+        "input_query_strings": ["*"],
+        "extra_config": {
+          "auth/validator": {
+            "alg": "ES256",
+            "jwk_url": "http://localhost:30302/accounts/jwks",
+            "roles_key": "role",
+            "roles": ["user", "admin", "organisation_admin", "super_admin"],
+            "operation_debug": true,
+            "disable_jwk_security": true,
+            "cache": false
+          }
+        },
+        "backend": [
+          {
+            "url_pattern": "/products/features/models",
+            "encoding": "no-op",
+            "host": ["http://localhost:30307"],
+            "sd": "static",
+            "disable_host_sanitize": true
+          }
+        ]
+    },
+    {
+        "endpoint": "/products/health",
+        "method": "GET",
+        "backend": [
+            {
+                "url_pattern": "/products/health",
+                "encoding": "no-op",
+                "sd": "static",
+                "host": ["http://localhost:30307"],
+                "disable_host_sanitize": true
+            }
+        ]
+    }
+]
+
+    
+    

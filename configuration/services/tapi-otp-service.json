@@ -1,0 +1,106 @@
+[
+  {
+    "endpoint": "/otps/health",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/otps/health",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30304"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/otps/docs",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/otps/docs",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30304"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/otps/docs/swagger",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/otps/docs/swagger",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30304"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/otps/docs/openapi.json",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/otps/docs/openapi.json",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30304"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/otps/docs/swagger-config",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/otps/docs/swagger-config",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30304"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/otps/{reference}",
+    "method": "POST",
+    "backend": [
+      {
+        "url_pattern": "/otps/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30304"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/otps/{reference}",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/otps/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30304"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/otps/resend/{reference}",
+    "method": "POST",
+    "backend": [
+      {
+        "url_pattern": "/otps/resend/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30304"],
+        "disable_host_sanitize": true
+      }
+    ]
+  }
+]

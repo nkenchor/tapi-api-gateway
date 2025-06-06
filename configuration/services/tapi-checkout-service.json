@@ -1,0 +1,131 @@
+[
+    {
+      "endpoint": "/checkout",
+      "method": "GET",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin", "super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/checkout",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30309"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/checkout/confirm",
+      "method": "POST",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin", "super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/checkout/confirm",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30309"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/checkout/status",
+      "method": "GET",
+      "input_headers": ["Authorization"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin", "super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/checkout/status",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30309"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/checkout",
+      "method": "DELETE",
+      "input_headers": ["Authorization"],
+      "backend": [
+        {
+          "url_pattern": "/checkout",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30309"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/checkout/health",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/checkout/health",
+          "encoding": "no-op",
+          "sd": "static",
+          "host": ["http://localhost:30309"],
+          "disable_host_sanitize": true
+        }
+      ]
+    },
+    {
+      "endpoint": "/checkout/history",
+      "method": "GET",
+      "input_headers": ["Authorization"],
+      "input_query_strings": ["*"],
+      "extra_config": {
+        "auth/validator": {
+          "alg": "ES256",
+          "jwk_url": "http://localhost:30302/accounts/jwks",
+          "roles_key": "role",
+          "roles": ["user", "admin", "organisation_admin", "super_admin"],
+          "operation_debug": true,
+          "disable_jwk_security": true,
+          "cache": false
+        }
+      },
+      "backend": [
+        {
+          "url_pattern": "/checkout/history",
+          "encoding": "no-op",
+          "host": ["http://localhost:30309"],
+          "sd": "static",
+          "disable_host_sanitize": true
+        }
+      ]
+    }
+  ]
+  

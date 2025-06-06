@@ -1,0 +1,313 @@
+[
+  {
+    "endpoint": "/accounts/login",
+    "method": "POST",
+    "backend": [
+      {
+        "url_pattern": "/accounts/login",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/logout",
+    "method": "POST",
+    "input_headers": ["Authorization"],
+    "backend": [
+      {
+        "url_pattern": "/accounts/logout",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/token/validate",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "backend": [
+      {
+        "url_pattern": "/accounts/token/validate",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/token/refresh",
+    "method": "POST",
+    "backend": [
+      {
+        "url_pattern": "/accounts/token/refresh",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/password/change",
+    "method": "PUT",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user", "admin", "super_admin", "organisation_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/accounts/password/change",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/password/{reference}/set",
+    "method": "PUT",
+    "input_headers": ["Authorization"],
+    "backend": [
+      {
+        "url_pattern": "/accounts/password/{reference}/set",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/password/{reference}/disable",
+    "method": "PUT",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user","admin", "super_admin", "organisation_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/accounts/password/{reference}/disable",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/password/{reference}",
+    "method": "DELETE",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["admin", "super_admin", "organisation_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/accounts/password/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/health",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/accounts/health",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/docs",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/accounts/docs",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/docs/swagger",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/accounts/docs/swagger",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/docs/openapi.json",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/accounts/docs/openapi.json",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/docs/swagger-config",
+    "method": "GET",
+    "backend": [
+      {
+        "url_pattern": "/accounts/docs/swagger-config",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/password/{reference}",
+    "method": "POST",
+    "input_headers": ["Authorization"],
+    "backend": [
+      {
+        "url_pattern": "/accounts/password/{reference}",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/password/reset",
+    "method": "POST",
+    "input_headers": ["Authorization"],
+    "backend": [
+      {
+        "url_pattern": "/accounts/password/reset",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/{reference}/deactivate",
+    "method": "POST",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["admin", "super_admin", "organisation_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/accounts/{reference}/deactivate",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/{reference}/reactivate",
+    "method": "POST",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["admin", "super_admin", "organisation_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/accounts/{reference}/reactivate",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  },
+  {
+    "endpoint": "/accounts/login/status",
+    "method": "GET",
+    "input_headers": ["Authorization"],
+    "extra_config": {
+      "auth/validator": {
+        "alg": "ES256",
+        "jwk_url": "http://localhost:30302/accounts/jwks",
+        "roles_key": "role",
+        "roles": ["user","admin", "super_admin", "organisation_admin"],
+        "operation_debug": true,
+        "disable_jwk_security": true,
+        "cache": false
+      }
+    },
+    "backend": [
+      {
+        "url_pattern": "/accounts/login/status",
+        "encoding": "no-op",
+        "sd": "static",
+        "host": ["http://localhost:30302"],
+        "disable_host_sanitize": true
+      }
+    ]
+  }
+]
